@@ -1,0 +1,36 @@
+{
+  "server": "campus-customs",
+  "database": "data/campus_customs_new.db",
+  "tests": [
+    {
+      "prompt": "Use the product stock and price tool for the Bulldog tee in size S. Tell me the exact inventory and pricing records.",
+      "tool_name": "get_product_stock_and_price",
+      "tool_output": {
+        "inventory": [
+          {"sku": "CC-TEE-WHITE", "name": "Classic Bulldog Tee", "size": "S", "qty": 0, "location": "Aisle B"}
+        ],
+        "pricing": [
+          {"sku": "CC-TEE-WHITE", "unit_cost": 8.0, "list_price": 28.0}
+        ]
+      }
+    },
+    {
+      "prompt": "Use the invoice and vendor tool for invoice 501. Return the exact linked invoice and vendor details.",
+      "tool_name": "get_invoice_with_vendor",
+      "tool_output": {
+        "invoice": [
+          {"id": 501, "vendor_id": 1, "amount": 840.0, "due_date": "2026-08-28", "status": "open", "description": "Rush reprint CC-TEE-WHITE S", "vendor_name": "Bulldog Print Co", "specialty": "apparel reprint", "lead_days": 5}
+        ]
+      }
+    },
+    {
+      "prompt": "Use the lease tool for lease 1. Return the exact shop lease record.",
+      "tool_name": "get_lease",
+      "tool_output": {
+        "lease": [
+          {"id": 1, "space_name": "Chapel Street shop", "landlord": "Elm City Properties", "monthly_rent": 2400.0, "next_due": "2026-09-02", "notes": null}
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+{
+  "status": "not_completed",
+  "starting_balance": 3400.0,
+  "note": "The clean full run was attempted, but the MCP stdio bridge failed before any ticket could be resolved."
+}
